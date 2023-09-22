@@ -1,0 +1,1704 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+</style>
+</head>
+<body>
+
+<table>
+  <tr>
+    <th>CSS Property</th>
+    <th>Values</th>
+    <th>Description</th>
+    <th>Extra Information</th>
+    <th>Example Code</th>
+    <th>Output</th>
+  </tr>
+  <tr>
+    <td>color</td>
+    <td>red, #00ff00, rgb(255, 0, 0)</td>
+    <td>Specifies text color</td>
+    <td>Accepts color names, hex, or RGB values</td>
+    <td><code>color: red;</code></td>
+    <td>This text is red.</td>
+  </tr>
+  <tr>
+    <td>font-size</td>
+    <td>12px, 1.2em</td>
+    <td>Specifies the font size</td>
+    <td>Units can be pixels or em</td>
+    <td><code>font-size: 16px;</code></td>
+    <td>This text has a font size of 16 pixels.</td>
+  </tr>
+  <!-- Add more rows as needed -->
+
+<!-- ... Previous table rows ... -->
+  <tr>
+    <td>filter</td>
+    <td>filter functions</td>
+    <td>Applies visual effects to an element, such as blur or brightness</td>
+    <td>Allows for the application of various image filters</td>
+    <td><code>filter: blur(5px);</code></td>
+    <td>This element has a 5px blur filter applied.</td>
+  </tr>
+  <tr>
+    <td>grid-template-columns</td>
+    <td>column values</td>
+    <td>Defines the columns of a CSS Grid layout</td>
+    <td>Specifies the size and number of grid columns</td>
+    <td><code>grid-template-columns: repeat(3, 1fr);</code></td>
+    <td>A grid with 3 columns of equal width.</td>
+  </tr>
+  <tr>
+    <td>grid-template-rows</td>
+    <td>row values</td>
+    <td>Defines the rows of a CSS Grid layout</td>
+    <td>Specifies the size and number of grid rows</td>
+    <td><code>grid-template-rows: 100px 200px;</code></td>
+    <td>A grid with two rows, 100px and 200px in height.</td>
+  </tr>
+  <tr>
+    <td>backdrop-filter</td>
+    <td>filter functions</td>
+    <td>Applies visual effects to the area behind an element</td>
+    <td>Allows for filters on the backdrop of an element</td>
+    <td><code>backdrop-filter: blur(10px);</code></td>
+    <td>The backdrop behind the element is blurred.</td>
+  </tr>
+  <tr>
+    <td>scroll-behavior</td>
+    <td>auto, smooth</td>
+    <td>Controls the scrolling behavior of an anchor link</td>
+    <td>Defines whether anchor link scrolling is smooth or instant</td>
+    <td><code>scroll-behavior: smooth;</code></td>
+    <td>Anchor links scroll smoothly to their target.</td>
+  </tr>
+  <tr>
+    <td>user-select</td>
+    <td>none, text, all</td>
+    <td>Specifies whether text can be selected by the user</td>
+    <td>Controls the ability to select and highlight text</td>
+    <td><code>user-select: none;</code></td>
+    <td>Text selection is disabled for this element.</td>
+  </tr>
+  <tr>
+    <td>grid-gap</td>
+    <td>gap values</td>
+    <td>Specifies the gap between rows and columns in a CSS Grid layout</td>
+    <td>Defines the spacing between grid rows and columns</td>
+    <td><code>grid-gap: 10px;</code></td>
+    <td>There is a 10px gap between grid items.</td>
+  </tr>
+  <tr>
+    <td>object-position</td>
+    <td>x and y position values</td>
+    <td>Specifies the position of a replaced element inside its container</td>
+    <td>Determines the horizontal and vertical positioning of replaced elements</td>
+    <td><code>object-position: center top;</code></td>
+    <td>The replaced element is positioned at the top center.</td>
+  </tr>
+  <tr>
+    <td>will-change</td>
+    <td>list of properties</td>
+    <td>Notifies the browser that an element's property is expected to change</td>
+    <td>Improves rendering performance when animating specific properties</td>
+    <td><code>will-change: transform;</code></td>
+    <td>Browser prepares for changes to the transform property.</td>
+  </tr>
+  <tr>
+    <td>contain</td>
+    <td>layout, style, paint, size, none</td>
+    <td>Specifies a containment context for an element</td>
+    <td>Defines the scope of the containment for layout, style, and paint operations</td>
+    <td><code>contain: layout;</code></td>
+    <td>The element is contained within a layout context.</td>
+  </tr>
+  <!-- Add more rows for additional CSS properties -->
+<!-- ... Previous table rows ... -->
+  <tr>
+    <td>scroll-snap-type</td>
+    <td>none, mandatory, proximity</td>
+    <td>Specifies how scrolling snaps to specific points in a scroll container</td>
+    <td>Controls the snapping behavior of scrollable content</td>
+    <td><code>scroll-snap-type: mandatory;</code></td>
+    <td>Scrolling snaps to specific points.</td>
+  </tr>
+  <tr>
+    <td>text-orientation</td>
+    <td>mixed, upright, sideways</td>
+    <td>Specifies the orientation of text within a line</td>
+    <td>Controls the orientation of characters within a line of text</td>
+    <td><code>text-orientation: upright;</code></td>
+    <td>Text characters are upright.</td>
+  </tr>
+  <tr>
+    <td>animation-delay</td>
+    <td>time value</td>
+    <td>Specifies the delay before an animation starts</td>
+    <td>Defines the time to wait before starting an animation</td>
+    <td><code>animation-delay: 2s;</code></td>
+    <td>The animation starts after a 2-second delay.</td>
+  </tr>
+  <tr>
+    <td>animation-duration</td>
+    <td>time value</td>
+    <td>Specifies the duration of an animation</td>
+    <td>Sets the time it takes for an animation to complete one cycle</td>
+    <td><code>animation-duration: 3s;</code></td>
+    <td>The animation takes 3 seconds to complete.</td>
+  </tr>
+  <tr>
+    <td>animation-timing-function</td>
+    <td>ease, linear, ease-in, ease-out, ease-in-out</td>
+    <td>Specifies the speed curve of an animation</td>
+    <td>Defines how the animation accelerates or decelerates</td>
+    <td><code>animation-timing-function: ease-in-out;</code></td>
+    <td>The animation follows an ease-in-out timing function.</td>
+  </tr>
+  <tr>
+    <td>animation-iteration-count</td>
+    <td>number, infinite</td>
+    <td>Specifies the number of times an animation should play</td>
+    <td>Determines how many times the animation should repeat</td>
+    <td><code>animation-iteration-count: 2;</code></td>
+    <td>The animation plays 2 times.</td>
+  </tr>
+  <tr>
+    <td>animation-direction</td>
+    <td>normal, reverse, alternate, alternate-reverse</td>
+    <td>Specifies the direction of an animation</td>
+    <td>Controls whether the animation plays forward, backward, or alternates</td>
+    <td><code>animation-direction: alternate;</code></td>
+    <td>The animation alternates direction with each iteration.</td>
+  </tr>
+  <tr>
+    <td>animation-fill-mode</td>
+    <td>none, forwards, backwards, both</td>
+    <td>Specifies how an animation applies styles before and after it runs</td>
+    <td>Defines the styles applied to the element when the animation is not running</td>
+    <td><code>animation-fill-mode: forwards;</code></td>
+    <td>The final animation frame's styles are applied after the animation.</td>
+  </tr>
+  <tr>
+    <td>will-change</td>
+    <td>list of properties</td>
+    <td>Notifies the browser that an element's property is expected to change</td>
+    <td>Improves rendering performance when animating specific properties</td>
+    <td><code>will-change: transform;</code></td>
+    <td>Browser prepares for changes to the transform property.</td>
+  </tr>
+  <tr>
+    <td>contain</td>
+    <td>layout, style, paint, size, none</td>
+    <td>Specifies a containment context for an element</td>
+    <td>Defines the scope of the containment for layout, style, and paint operations</td>
+    <td><code>contain: layout;</code></td>
+    <td>The element is contained within a layout context.</td>
+  </tr>
+  <!-- Add more rows for additional CSS properties -->
+<!-- ... Previous table rows ... -->
+  <tr>
+    <td>shape-outside</td>
+    <td>none, <shape-box>, <shape-image>, <basic-shape></td>
+    <td>Specifies the shape that content should flow around</td>
+    <td>Defines a shape for text to wrap around</td>
+    <td><code>shape-outside: circle(50%);</code></td>
+    <td>Content flows around a circular shape.</td>
+  </tr>
+  <tr>
+    <td>text-overflow</td>
+    <td>ellipsis, clip</td>
+    <td>Specifies how overflowed text is indicated when truncated</td>
+    <td>Determines how text is displayed when it overflows its container</td>
+    <td><code>text-overflow: ellipsis;</code></td>
+    <td>Text is truncated with an ellipsis when it overflows.</td>
+  </tr>
+  <tr>
+    <td>transform-style</td>
+    <td>flat, preserve-3d</td>
+    <td>Specifies the 3D rendering mode for transformed elements</td>
+    <td>Determines whether child elements maintain their 3D position when transformed</td>
+    <td><code>transform-style: preserve-3d;</code></td>
+    <td>Child elements maintain their 3D position within the transformed parent.</td>
+  </tr>
+  <tr>
+    <td>perspective-origin</td>
+    <td>x and y position values</td>
+    <td>Specifies the position at which the viewer looks at a 3D-transformed element</td>
+    <td>Determines the point from which the 3D space is viewed</td>
+    <td><code>perspective-origin: 50% 50%;</code></td>
+    <td>The viewer looks at the center of the transformed element.</td>
+  </tr>
+  <tr>
+    <td>scroll-margin</td>
+    <td>length values</td>
+    <td>Specifies the margin around scroll containers</td>
+    <td>Sets the margin area outside of which content is brought into view on scrolling</td>
+    <td><code>scroll-margin: 20px;</code></td>
+    <td>A margin of 20px is applied around scroll containers.</td>
+  </tr>
+  <tr>
+    <td>scroll-margin-top</td>
+    <td>length value</td>
+    <td>Specifies the margin above scroll containers</td>
+    <td>Sets the margin area at the top outside of which content is brought into view on scrolling</td>
+    <td><code>scroll-margin-top: 10px;</code></td>
+    <td>A margin of 10px is applied at the top of scroll containers.</td>
+  </tr>
+  <tr>
+    <td>scroll-margin-right</td>
+    <td>length value</td>
+    <td>Specifies the margin to the right of scroll containers</td>
+    <td>Sets the margin area on the right outside of which content is brought into view on scrolling</td>
+    <td><code>scroll-margin-right: 15px;</code></td>
+    <td>A margin of 15px is applied to the right of scroll containers.</td>
+  </tr>
+  <tr>
+    <td>scroll-margin-bottom</td>
+    <td>length value</td>
+    <td>Specifies the margin below scroll containers</td>
+    <td>Sets the margin area at the bottom outside of which content is brought into view on scrolling</td>
+    <td><code>scroll-margin-bottom: 20px;</code></td>
+    <td>A margin of 20px is applied at the bottom of scroll containers.</td>
+  </tr>
+  <tr>
+    <td>scroll-margin-left</td>
+    <td>length value</td>
+    <td>Specifies the margin to the left of scroll containers</td>
+    <td>Sets the margin area on the left outside of which content is brought into view on scrolling</td>
+    <td><code>scroll-margin-left: 25px;</code></td>
+    <td>A margin of 25px is applied to the left of scroll containers.</td>
+  </tr>
+  <tr>
+    <td>scroll-snap-align</td>
+    <td>none, start, end, center</td>
+    <td>Specifies how scroll containers should align when snapping into place</td>
+    <td>Controls the alignment of scroll containers when they snap</td>
+    <td><code>scroll-snap-align: start;</code></td>
+    <td>Scroll containers snap to the nearest start position.</td>
+  </tr>
+  <tr>
+    <td>scroll-snap-stop</td>
+    <td>normal, always</td>
+    <td>Specifies whether scroll containers should stop at snap points</td>
+    <td>Controls whether scrolling stops precisely at snap points</td>
+    <td><code>scroll-snap-stop: always;</code></td>
+    <td>Scrolling stops at snap points.</td>
+  </tr>
+  <tr>
+    <td>scroll-snap-type-x</td>
+    <td>none, mandatory, proximity</td>
+    <td>Specifies how horizontal scrolling snaps to specific points in a scroll container</td>
+    <td>Controls the horizontal snapping behavior of scrollable content</td>
+    <td><code>scroll-snap-type-x: proximity;</code></td>
+    <td>Horizontal scrolling snaps to the nearest point.</td>
+  </tr>
+  <tr>
+    <td>scroll-snap-type-y</td>
+    <td>none, mandatory, proximity</td>
+    <td>Specifies how vertical scrolling snaps to specific points in a scroll container</td>
+    <td>Controls the vertical snapping behavior of scrollable content</td>
+    <td><code>scroll-snap-type-y: mandatory;</code></td>
+    <td>Vertical scrolling snaps to specific points.</td>
+  </tr>
+  <!-- Add more rows for additional CSS properties -->
+
+<!-- ... Previous table rows ... -->
+  <tr>
+    <td>scroll-padding</td>
+    <td>length values</td>
+    <td>Specifies the padding area around scroll containers</td>
+    <td>Sets the padding area inside of which content is brought into view on scrolling</td>
+    <td><code>scroll-padding: 10px 20px;</code></td>
+    <td>A padding of 10px on the top and bottom, and 20px on the left and right of scroll containers.</td>
+  </tr>
+  <tr>
+    <td>scroll-padding-top</td>
+    <td>length value</td>
+    <td>Specifies the padding above scroll containers</td>
+    <td>Sets the padding area at the top inside of which content is brought into view on scrolling</td>
+    <td><code>scroll-padding-top: 10px;</code></td>
+    <td>A padding of 10px is applied at the top of scroll containers.</td>
+  </tr>
+  <tr>
+    <td>scroll-padding-right</td>
+    <td>length value</td>
+    <td>Specifies the padding to the right of scroll containers</td>
+    <td>Sets the padding area on the right inside of which content is brought into view on scrolling</td>
+    <td><code>scroll-padding-right: 15px;</code></td>
+    <td>A padding of 15px is applied to the right of scroll containers.</td>
+  </tr>
+  <tr>
+    <td>scroll-padding-bottom</td>
+    <td>length value</td>
+    <td>Specifies the padding below scroll containers</td>
+    <td>Sets the padding area at the bottom inside of which content is brought into view on scrolling</td>
+    <td><code>scroll-padding-bottom: 20px;</code></td>
+    <td>A padding of 20px is applied at the bottom of scroll containers.</td>
+  </tr>
+  <tr>
+    <td>scroll-padding-left</td>
+    <td>length value</td>
+    <td>Specifies the padding to the left of scroll containers</td>
+    <td>Sets the padding area on the left inside of which content is brought into view on scrolling</td>
+    <td><code>scroll-padding-left: 25px;</code></td>
+    <td>A padding of 25px is applied to the left of scroll containers.</td>
+  </tr>
+  <tr>
+    <td>scroll-snap-margin</td>
+    <td>length values</td>
+    <td>Specifies the margin area around scroll containers for snap points</td>
+    <td>Sets the margin area outside of which content is brought into view on snapping</td>
+    <td><code>scroll-snap-margin: 5px 10px;</code></td>
+    <td>A margin of 5px on the top and bottom, and 10px on the left and right of snap points.</td>
+  </tr>
+  <tr>
+    <td>scroll-snap-margin-top</td>
+    <td>length value</td>
+    <td>Specifies the margin above scroll containers for snap points</td>
+    <td>Sets the margin area at the top outside of which content is brought into view on snapping</td>
+    <td><code>scroll-snap-margin-top: 5px;</code></td>
+    <td>A margin of 5px is applied at the top of snap points.</td>
+  </tr>
+  <tr>
+    <td>scroll-snap-margin-right</td>
+    <td>length value</td>
+    <td>Specifies the margin to the right of scroll containers for snap points</td>
+    <td>Sets the margin area on the right outside of which content is brought into view on snapping</td>
+    <td><code>scroll-snap-margin-right: 10px;</code></td>
+    <td>A margin of 10px is applied to the right of snap points.</td>
+  </tr>
+  <tr>
+    <td>scroll-snap-margin-bottom</td>
+    <td>length value</td>
+    <td>Specifies the margin below scroll containers for snap points</td>
+    <td>Sets the margin area at the bottom outside of which content is brought into view on snapping</td>
+    <td><code>scroll-snap-margin-bottom: 15px;</code></td>
+    <td>A margin of 15px is applied at the bottom of snap points.</td>
+  </tr>
+  <tr>
+    <td>scroll-snap-margin-left</td>
+    <td>length value</td>
+    <td>Specifies the margin to the left of scroll containers for snap points</td>
+    <td>Sets the margin area on the left outside of which content is brought into view on snapping</td>
+    <td><code>scroll-snap-margin-left: 20px;</code></td>
+    <td>A margin of 20px is applied to the left of snap points.</td>
+  </tr>
+  <tr>
+    <td>scroll-snap-padding</td>
+    <td>length values</td>
+    <td>Specifies the padding area around scroll containers for snap points</td>
+    <td>Sets the padding area inside of which content is brought into view on snapping</td>
+    <td><code>scroll-snap-padding: 5px 10px;</code></td>
+    <td>A padding of 5px on the top and bottom, and 10px on the left and right of snap points.</td>
+  </tr>
+  <tr>
+    <td>scroll-snap-padding-top</td>
+    <td>length value</td>
+    <td>Specifies the padding above scroll containers for snap points</td>
+    <td>Sets the padding area at the top inside of which content is brought into view on snapping</td>
+    <td><code>scroll-snap-padding-top: 5px;</code></td>
+    <td>A padding of 5px is applied at the top of snap points.</td>
+  </tr>
+  <tr>
+    <td>scroll-snap-padding-right</td>
+    <td>length value</td>
+    <td>Specifies the padding to the right of scroll containers for snap points</td>
+    <td>Sets the padding area on the right inside of which content is brought into view on snapping</td>
+    <td><code>scroll-snap-padding-right: 10px;</code></td>
+    <td>A padding of 10px is applied to the right of snap points.</td>
+  </tr>
+  <tr>
+    <td>scroll-snap-padding-bottom</td>
+    <td>length value</td>
+    <td>Specifies the padding below scroll containers for snap points</td>
+    <td>Sets the padding area at the bottom inside of which content is brought into view on snapping</td>
+    <td><code>scroll-snap-padding-bottom: 15px;</code></td>
+    <td>A padding of 15px is applied at the bottom of snap points.</td>
+  </tr>
+  <tr>
+    <td>scroll-snap-padding-left</td>
+    <td>length value</td>
+    <td>Specifies the padding to the left of scroll containers for snap points</td>
+    <td>Sets the padding area on the left inside of which content is brought into view on snapping</td>
+    <td><code>scroll-snap-padding-left: 20px;</code></td>
+    <td>A padding of 20px is applied to the left of snap points.</td>
+  </tr>
+  <tr>
+    <td>background-attachment</td>
+    <td>scroll, fixed, local</td>
+    <td>Specifies whether a background image is fixed or scrolls with the content</td>
+    <td>Controls how a background image behaves when scrolling</td>
+    <td><code>background-attachment: fixed;</code></td>
+    <td>The background image is fixed relative to the viewport.</td>
+  </tr>
+  <tr>
+    <td>background-clip</td>
+    <td>border-box, padding-box, content-box, text</td>
+    <td>Specifies the painting area of a background image</td>
+    <td>Defines which part of an element is used as the background painting area</td>
+    <td><code>background-clip: padding-box;</code></td>
+    <td>The background is painted within the element's padding box.</td>
+  </tr>
+  <tr>
+    <td>background-origin</td>
+    <td>padding-box, border-box, content-box</td>
+    <td>Specifies the positioning area of a background image</td>
+    <td>Defines where the background image is positioned relative to the element</td>
+    <td><code>background-origin: border-box;</code></td>
+    <td>The background image is positioned relative to the element's border box.</td>
+  </tr>
+  <tr>
+    <td>background-size</td>
+    <td>auto, cover, contain, length values</td>
+    <td>Specifies the size of a background image</td>
+    <td>Defines how a background image should be sized within its container</td>
+    <td><code>background-size: cover;</code></td>
+    <td>The background image covers the entire container.</td>
+  </tr>
+  <tr>
+    <td>mix-blend-mode</td>
+    <td>normal, multiply, screen, overlay, darken, lighten, color-dodge, color-burn, hard-light, soft-light, difference, exclusion, hue, saturation, color, luminosity</td>
+    <td>Specifies how an element's content blends with its background</td>
+    <td>Controls the blending mode of an element</td>
+    <td><code>mix-blend-mode: multiply;</code></td>
+    <td>The element's content blends with the background using the multiply mode.</td>
+  </tr>
+  <tr>
+    <td>isolation</td>
+    <td>auto, isolate</td>
+    <td>Specifies whether an element's content is isolated from its surroundings</td>
+    <td>Determines how elements are composited with respect to their ancestors</td>
+    <td><code>isolation: isolate;</code></td>
+    <td>The element's content is isolated from its surroundings.</td>
+  </tr>
+  <tr>
+    <td>shape-rendering</td>
+    <td>auto, optimizeSpeed, crispEdges, geometricPrecision</td>
+    <td>Specifies the quality of rendering for shapes</td>
+    <td>Controls how geometric shapes are rendered</td>
+    <td><code>shape-rendering: crispEdges;</code></td>
+    <td>Shapes are rendered with crisp edges.</td>
+  </tr>
+  <tr>
+    <td>image-rendering</td>
+    <td>auto, crisp-edges, pixelated</td>
+    <td>Specifies the quality of image rendering</td>
+    <td>Defines how images are scaled and smoothed</td>
+    <td><code>image-rendering: pixelated;</code></td>
+    <td>Images are rendered with a pixelated effect.</td>
+  </tr>
+  <tr>
+    <td>image-orientation</td>
+    <td>from-image, <angle></td>
+    <td>Specifies the orientation of an image</td>
+    <td>Sets the orientation of an image in degrees</td>
+    <td><code>image-orientation: 90deg;</code></td>
+    <td>The image is rotated 90 degrees clockwise.</td>
+  </tr>
+  <tr>
+    <td>image-resolution</td>
+    <td>normal, <resolution></td>
+    <td>Specifies the resolution of an image for printing</td>
+    <td>Sets the resolution of an image in dots per inch (DPI)</td>
+    <td><code>image-resolution: 300dpi;</code></td>
+    <td>The image is rendered at 300 dots per inch.</td>
+  </tr>
+  <tr>
+    <td>image-orientation</td>
+    <td>from-image, <angle></td>
+    <td>Specifies the orientation of an image</td>
+    <td>Sets the orientation of an image in degrees</td>
+    <td><code>image-orientation: 90deg;</code></td>
+    <td>The image is rotated 90 degrees clockwise.</td>
+  </tr>
+  <tr>
+    <td>clip-path</td>
+    <td>none, <basic-shape>, <geometry-box>, <url></td>
+    <td>Specifies a clipping path to clip an element's content</td>
+    <td>Defines a path or shape to be used for clipping</td>
+    <td><code>clip-path: polygon(0 0, 100% 0, 100% 100%);</code></td>
+    <td>The element's content is clipped using a polygon shape.</td>
+  </tr>
+  <tr>
+    <td>clip-rule</td>
+    <td>nonzero, evenodd</td>
+    <td>Specifies the fill rule used for determining the interior of a shape</td>
+    <td>Determines how overlapping paths are filled in a clipping path</td>
+    <td><code>clip-rule: evenodd;</code></td>
+    <td>Defines the fill rule as even-odd.</td>
+  </tr>
+  <tr>
+    <td>contain</td>
+    <td>none, strict, content, size, layout, style, paint</td>
+    <td>Specifies how an element should contain its children</td>
+    <td>Controls containment of an element's content within its own layout</td>
+    <td><code>contain: strict;</code></td>
+    <td>The element strictly contains its children for better isolation.</td>
+  </tr>
+  <tr>
+    <td>scroll-behavior</td>
+    <td>auto, smooth</td>
+    <td>Specifies the scrolling behavior for a scrolling box</td>
+    <td>Determines whether scrolling is animated or instant</td>
+    <td><code>scroll-behavior: smooth;</code></td>
+    <td>Scrolling is animated and smooth.</td>
+  </tr>
+  <tr>
+    <td>scroll-snap-type</td>
+    <td>none, mandatory, proximity</td>
+    <td>Specifies how scrolling behaves when it stops within a scroll container</td>
+    <td>Controls the snap points behavior of scrollable content</td>
+    <td><code>scroll-snap-type: mandatory;</code></td>
+    <td>Scrolling always stops at snap points.</td>
+  </tr>
+  <tr>
+    <td>scroll-snap-points-x</td>
+    <td>none, repeat(<length>), repeat(<percentage>), snap-position</td>
+    <td>Specifies the horizontal snap points for scroll containers</td>
+    <td>Sets the horizontal positions at which scrolling stops</td>
+    <td><code>scroll-snap-points-x: repeat(50%);</code></td>
+    <td>Scrolling stops at every 50% of the container's width.</td>
+  </tr>
+  <tr>
+    <td>scroll-snap-points-y</td>
+    <td>none, repeat(<length>), repeat(<percentage>), snap-position</td>
+    <td>Specifies the vertical snap points for scroll containers</td>
+    <td>Sets the vertical positions at which scrolling stops</td>
+    <td><code>scroll-snap-points-y: snap-position(20%);</code></td>
+    <td>Scrolling stops at a snap position 20% from the top of the container.</td>
+  </tr>
+  <tr>
+    <td>scroll-snap-coordinate</td>
+    <td>none, <position></td>
+    <td>Specifies the coordinate at which scrolling stops within a scroll container</td>
+    <td>Sets the precise snap position for scrolling</td>
+    <td><code>scroll-snap-coordinate: 50% 50%;</code></td>
+    <td>Scrolling stops at the center of the container.</td>
+  </tr>
+  <tr>
+    <td>scrollbar-width</td>
+    <td>auto, thin, none</td>
+    <td>Specifies the width of scrollbar elements</td>
+    <td>Controls the width of scrollbar components</td>
+    <td><code>scrollbar-width: thin;</code></td>
+    <td>Scrollbar width is set to 'thin.'</td>
+  </tr>
+  <tr>
+    <td>scrollbar-color</td>
+    <td>auto, <color></td>
+    <td>Specifies the color of scrollbar elements</td>
+    <td>Controls the color of scrollbar components</td>
+    <td><code>scrollbar-color: #333;</code></td>
+    <td>Scrollbar color is set to '#333.'</td>
+  </tr>
+  <!-- Add more rows for additional CSS properties -->
+
+  <!-- ... Previous table rows ... -->
+  <tr>
+    <td>text-combine-upright</td>
+    <td>none, all, digits</td>
+    <td>Specifies how multiple text characters are combined and upright</td>
+    <td>Determines how text characters are combined for vertical text</td>
+    <td><code>text-combine-upright: all;</code></td>
+    <td>All text characters are combined and displayed upright.</td>
+  </tr>
+  <tr>
+    <td>text-underline-position</td>
+    <td>auto, under, left, right, under left, under right</td>
+    <td>Specifies the position of underlines in text</td>
+    <td>Controls the placement of underlines in relation to text</td>
+    <td><code>text-underline-position: under right;</code></td>
+    <td>Underlines appear below and to the right of the text.</td>
+  </tr>
+  <tr>
+    <td>text-decoration-skip</td>
+    <td>none, objects, spaces, ink, edges, box-decoration</td>
+    <td>Specifies which parts of an element's text decoration should be skipped</td>
+    <td>Determines areas where text decorations should not be drawn</td>
+    <td><code>text-decoration-skip: ink;</code></td>
+    <td>Text decorations skip ink areas.</td>
+  </tr>
+  <tr>
+    <td>text-decoration-thickness</td>
+    <td>from-font, <length>, <percentage></td>
+    <td>Specifies the thickness of text decorations</td>
+    <td>Sets the thickness of text underline, overline, and line-through</td>
+    <td><code>text-decoration-thickness: 2px;</code></td>
+    <td>Text decorations have a thickness of 2 pixels.</td>
+  </tr>
+  <tr>
+    <td>text-underline-offset</td>
+    <td>auto, <length>, <percentage></td>
+    <td>Specifies the offset of underlines in relation to text</td>
+    <td>Controls the vertical position of underlines</td>
+    <td><code>text-underline-offset: 3px;</code></td>
+    <td>Underlines are positioned 3 pixels below the text baseline.</td>
+  </tr>
+  <tr>
+    <td>text-decoration-color</td>
+    <td><color></td>
+    <td>Specifies the color of text decorations</td>
+    <td>Defines the color of text underline, overline, and line-through</td>
+    <td><code>text-decoration-color: red;</code></td>
+    <td>Text decorations are colored red.</td>
+  </tr>
+  <tr>
+    <td>text-emphasis</td>
+    <td><string>, <color></td>
+    <td>Specifies additional emphasis marks for text</td>
+    <td>Applies additional marks, such as dots or accents, to text</td>
+    <td><code>text-emphasis: dot red;</code></td>
+    <td>Text is emphasized with red dots.</td>
+  </tr>
+  <tr>
+    <td>text-emphasis-style</td>
+    <td>none, filled, open, dot, circle, double-circle, triangle, sesame, white, black</td>
+    <td>Specifies the style of text emphasis marks</td>
+    <td>Determines the visual style of emphasis marks</td>
+    <td><code>text-emphasis-style: circle;</code></td>
+    <td>Text emphasis marks are styled as circles.</td>
+  </tr>
+  <tr>
+    <td>text-emphasis-color</td>
+    <td><color></td>
+    <td>Specifies the color of text emphasis marks</td>
+    <td>Defines the color of emphasis marks applied to text</td>
+    <td><code>text-emphasis-color: blue;</code></td>
+    <td>Text emphasis marks are colored blue.</td>
+  </tr>
+  <tr>
+    <td>text-shadow</td>
+    <td>none, <length> <length> <length> <color></td>
+    <td>Specifies the shadow effect for text</td>
+    <td>Applies a shadow to text with a specified color and offset</td>
+    <td><code>text-shadow: 2px 2px 4px #333;</code></td>
+    <td>Text has a shadow 2px to the right and 2px below with a blur radius of 4px and color '#333'.</td>
+  </tr>
+  <tr>
+    <td>box-ordinal-group</td>
+    <td><integer></td>
+    <td>Specifies the ordinal group of a flex item</td>
+    <td>Determines the order in which flex items appear in a flex container</td>
+    <td><code>box-ordinal-group: 2;</code></td>
+    <td>The flex item belongs to ordinal group 2.</td>
+  </tr>
+  <tr>
+    <td>box-pack</td>
+    <td>start, end, center, justify</td>
+    <td>Specifies how flex items are aligned in a flex container</td>
+    <td>Controls the alignment of flex items along the main axis</td>
+    <td><code>box-pack: center;</code></td>
+    <td>Flex items are centered along the main axis.</td>
+  </tr>
+  <tr>
+    <td>hyphenate-character</td>
+    <td><string></td>
+    <td>Specifies the character used for hyphenation</td>
+    <td>Defines the character that separates hyphenated parts of a word</td>
+    <td><code>hyphenate-character: "\u2011";</code></td>
+    <td>The character '\u2011' is used for hyphenation.</td>
+  </tr>
+  <tr>
+    <td>hyphenate-limit-chars</td>
+    <td>auto, <integer></td>
+    <td>Specifies the maximum number of consecutive characters allowed before hyphenation</td>
+    <td>Controls the number of characters in a word before hyphenation can occur</td>
+    <td><code>hyphenate-limit-chars: 4;</code></td>
+    <td>Words longer than 4 characters can be hyphenated.</td>
+  </tr>
+  <tr>
+    <td>hyphenate-limit-lines</td>
+    <td>no-limit, <integer></td>
+    <td>Specifies the maximum number of consecutive lines allowed before hyphenation</td>
+    <td>Controls the number of lines in a paragraph before hyphenation can occur</td>
+    <td><code>hyphenate-limit-lines: 2;</code></td>
+    <td>Hyphenation occurs after 2 consecutive lines.</td>
+  </tr>
+  <tr>
+    <td>hyphenate-limit-zone</td>
+    <td><length>, <percentage></td>
+    <td>Specifies the maximum space allowed at the end of a line before hyphenation</td>
+    <td>Controls the size of the space at the end of a line where hyphenation can occur</td>
+    <td><code>hyphenate-limit-zone: 10px;</code></td>
+    <td>Hyphenation is allowed in the last 10px of a line.</td>
+  </tr>
+  <tr>
+    <td>hyphens</td>
+    <td>none, manual, auto</td>
+    <td>Specifies how words are hyphenated in text</td>
+    <td>Determines whether and how words are hyphenated when text wraps</td>
+    <td><code>hyphens: auto;</code></td>
+    <td>Words are automatically hyphenated as needed.</td>
+  </tr>
+  <tr>
+    <td>overflow-wrap</td>
+    <td>normal, break-word</td>
+    <td>Specifies how words should break when they exceed the container's width</td>
+    <td>Determines whether words break at the end of a line or within words</td>
+    <td><code>overflow-wrap: break-word;</code></td>
+    <td>Words are allowed to break within themselves if they exceed the container's width.</td>
+  </tr>
+  <tr>
+    <td>ruby-align</td>
+    <td>start, center, space-between, space-around</td>
+    <td>Specifies the alignment of ruby text in relation to its base text</td>
+    <td>Controls the placement of ruby text relative to its base text</td>
+    <td><code>ruby-align: center;</code></td>
+    <td>Ruby text is centered relative to its base text.</td>
+  </tr>
+  <tr>
+    <td>ruby-merge</td>
+    <td>auto, collapse, separate</td>
+    <td>Specifies whether adjacent ruby text should merge or be kept separate</td>
+    <td>Determines whether ruby text merges with adjacent ruby text or remains separate</td>
+    <td><code>ruby-merge: separate;</code></td>
+    <td>Adjacent ruby text is kept separate.</td>
+  </tr>
+  <tr>
+    <td>ruby-position</td>
+    <td>over, under, inter-character</td>
+    <td>Specifies the placement of ruby text relative to its base text</td>
+    <td>Determines where ruby text appears in relation to its base text</td>
+    <td><code>ruby-position: over;</code></td>
+    <td>Ruby text appears above the base text.</td>
+  </tr>
+  <tr>
+    <td>grid</td>
+    <td>none, <grid-template></td>
+    <td>Specifies the size and placement of grid items within a grid container</td>
+    <td>Defines a grid layout and its properties</td>
+    <td><code>grid: 1fr 2fr / 100px 200px;</code></td>
+    <td>Creates a grid with specified row and column sizes.</td>
+  </tr>
+  <tr>
+    <td>grid-template-areas</td>
+    <td><string></td>
+    <td>Specifies the grid layout using named grid areas</td>
+    <td>Defines a grid layout by naming areas and assigning items to those areas</td>
+    <td><code>grid-template-areas: "header header" "nav main" "footer footer";</code></td>
+    <td>Defines a grid layout with named areas for header, nav, main, and footer.</td>
+  </tr>
+  <tr>
+    <td>grid-template-columns</td>
+    <td>none, <track-list></td>
+    <td>Specifies the size of columns in a grid layout</td>
+    <td>Sets the width of grid columns individually or using a repeating pattern</td>
+    <td><code>grid-template-columns: repeat(3, 1fr);</code></td>
+    <td>Creates three columns with equal width in a grid.</td>
+  </tr>
+  <tr>
+    <td>grid-template-rows</td>
+    <td>none, <track-list></td>
+    <td>Specifies the size of rows in a grid layout</td>
+    <td>Sets the height of grid rows individually or using a repeating pattern</td>
+    <td><code>grid-template-rows: 50px 100px;</code></td>
+    <td>Creates two rows with heights of 50px and 100px in a grid.</td>
+  </tr>
+  <tr>
+    <td>grid-template</td>
+    <td>none, <grid-template-rows> / <grid-template-columns></td>
+    <td>Specifies the size and placement of rows and columns in a grid layout</td>
+    <td>Defines a grid layout by specifying both rows and columns</td>
+    <td><code>grid-template: 1fr 2fr / 100px 200px;</code></td>
+    <td>Creates a grid with specified row and column sizes.</td>
+  </tr>
+  <tr>
+    <td>grid-column-start</td>
+    <td>auto, <integer>, <span></td>
+    <td>Specifies where a grid item starts within a grid column</td>
+    <td>Sets the starting position of a grid item along the column axis</td>
+    <td><code>grid-column-start: 2;</code></td>
+    <td>The grid item starts at the second column.</td>
+  </tr>
+  <tr>
+    <td>grid-column-end</td>
+    <td>auto, <integer>, <span></td>
+    <td>Specifies where a grid item ends within a grid column</td>
+    <td>Sets the ending position of a grid item along the column axis</td>
+    <td><code>grid-column-end: span 2;</code></td>
+    <td>The grid item spans 2 columns.</td>
+  </tr>
+  <tr>
+    <td>grid-row-start</td>
+    <td>auto, <integer>, <span></td>
+    <td>Specifies where a grid item starts within a grid row</td>
+    <td>Sets the starting position of a grid item along the row axis</td>
+    <td><code>grid-row-start: 1;</code></td>
+    <td>The grid item starts at the first row.</td>
+  </tr>
+  <tr>
+    <td>grid-row-end</td>
+    <td>auto, <integer>, <span></td>
+    <td>Specifies where a grid item ends within a grid row</td>
+    <td>Sets the ending position of a grid item along the row axis</td>
+    <td><code>grid-row-end: span 2;</code></td>
+    <td>The grid item spans 2 rows.</td>
+  </tr>
+  <tr>
+    <td>grid-area</td>
+    <td>auto, <name>, <integer>, <span></td>
+    <td>Specifies the size and placement of a grid item within the grid</td>
+    <td>Defines a grid item's location and size within the grid</td>
+    <td><code>grid-area: 1 / 2 / span 2 / span 3;</code></td>
+    <td>The grid item starts at row 1, column 2, spans 2 rows, and 3 columns.</td>
+  </tr>
+  <tr>
+    <td>grid-auto-columns</td>
+    <td>auto, max-content, min-content, <length></td>
+    <td>Specifies the size of automatically-created columns in a grid layout</td>
+    <td>Sets the width of columns that are created to accommodate additional content</td>
+    <td><code>grid-auto-columns: min-content;</code></td>
+    <td>Automatically created columns have a minimum width to fit content.</td>
+  </tr>
+  <tr>
+    <td>grid-auto-rows</td>
+    <td>auto, max-content, min-content, <length></td>
+    <td>Specifies the size of automatically-created rows in a grid layout</td>
+    <td>Sets the height of rows that are created to accommodate additional content</td>
+    <td><code>grid-auto-rows: max-content;</code></td>
+    <td>Automatically created rows have a maximum height to fit content.</td>
+  </tr>
+  <tr>
+    <td>grid-auto-flow</td>
+    <td>row, column, dense, row dense, column dense</td>
+    <td>Specifies how auto-placed items are added to the grid</td>
+    <td>Determines whether auto-placed items are added as rows or columns and how gaps are filled</td>
+    <td><code>grid-auto-flow: column dense;</code></td>
+    <td>Auto-placed items are added as columns, and empty spaces are filled densely.</td>
+  </tr>
+  <tr>
+    <td>grid-gap</td>
+    <td><length>, <percentage></td>
+    <td>Specifies the size of the gap between grid rows and columns</td>
+    <td>Sets the spacing between rows and columns in a grid layout</td>
+    <td><code>grid-gap: 10px 20px;</code></td>
+    <td>There is a 10px gap between rows and a 20px gap between columns.</td>
+  </tr>
+  <tr>
+    <td>grid-column-gap</td>
+    <td><length>, <percentage></td>
+    <td>Specifies the size of the gap between grid columns</td>
+    <td>Sets the spacing between columns in a grid layout</td>
+    <td><code>grid-column-gap: 20px;</code></td>
+    <td>There is a 20px gap between columns in the grid.</td>
+  </tr>
+  <tr>
+    <td>grid-row-gap</td>
+    <td><length>, <percentage></td>
+    <td>Specifies the size of the gap between grid rows</td>
+    <td>Sets the spacing between rows in a grid layout</td>
+    <td><code>grid-row-gap: 10px;</code></td>
+    <td>There is a 10px gap between rows in the grid.</td>
+  </tr>
+  <tr>
+    <td>justify-content</td>
+    <td>flex-start, flex-end, center, space-between, space-around, space-evenly</td>
+    <td>Specifies how flex items are aligned along the main axis</td>
+    <td>Controls the alignment of flex items along the main axis</td>
+    <td><code>justify-content: center;</code></td>
+    <td>Flex items are centered along the main axis.</td>
+  </tr>
+  <tr>
+    <td>align-content</td>
+    <td>flex-start, flex-end, center, space-between, space-around, space-evenly, stretch</td>
+    <td>Specifies how flex lines are aligned within a flex container</td>
+    <td>Controls the alignment of flex lines along the cross axis</td>
+    <td><code>align-content: space-between;</code></td>
+    <td>Flex lines are spaced evenly within the container.</td>
+  </tr>
+  <tr>
+    <td>align-self</td>
+    <td>auto, flex-start, flex-end, center, baseline, stretch</td>
+    <td>Specifies how a single flex item is aligned within a flex container</td>
+    <td>Controls the alignment of a specific flex item along the cross axis</td>
+    <td><code>align-self: flex-end;</code></td>
+    <td>The specific flex item is aligned to the end of the cross axis.</td>
+  </tr>
+  <tr>
+    <td>order</td>
+    <td><integer></td>
+    <td>Specifies the order of a flex item within a flex container</td>
+    <td>Determines the visual order in which flex items are displayed</td>
+    <td><code>order: 2;</code></td>
+    <td>The flex item appears second in the visual order.</td>
+  </tr>
+  <tr>
+    <td>shape-outside</td>
+    <td>none, <shape-box>, <basic-shape>, <url></td>
+    <td>Specifies the shape that content flows around</td>
+    <td>Defines a shape for content to wrap around in a float or positioned element</td>
+    <td><code>shape-outside: circle(50%);</code></td>
+    <td>Content flows around a circular shape positioned at the center.</td>
+  </tr>
+  <tr>
+    <td>shape-image-threshold</td>
+    <td><number></td>
+    <td>Specifies the alpha channel threshold for content wrapping around a shape</td>
+    <td>Sets the minimum alpha value for a pixel to be included in the shape</td>
+    <td><code>shape-image-threshold: 0.5;</code></td>
+    <td>Pixels with alpha values above 0.5 are included in the shape.</td>
+  </tr>
+  <tr>
+    <td>shape-margin</td>
+    <td><length></td>
+    <td>Specifies the margin between a shape and content flowing around it</td>
+    <td>Sets the distance between the shape and the wrapped content</td>
+    <td><code>shape-margin: 10px;</code></td>
+    <td>Content is offset from the shape by 10 pixels.</td>
+  </tr>
+  <tr>
+    <td>shape-inside</td>
+    <td>auto, <shape-box>, <basic-shape>, <url></td>
+    <td>Specifies a shape to define the content area within an element</td>
+    <td>Defines a shape for the inner content area of a float or positioned element</td>
+    <td><code>shape-inside: ellipse(50% 50% at 50% 50%);</code></td>
+    <td>The inner content area is defined by an elliptical shape.</td>
+  </tr>
+  <tr>
+    <td>scroll-padding</td>
+    <td><length>, <percentage>, auto</td>
+    <td>Specifies the padding area around scroll containers</td>
+    <td>Sets the size of the padding area for scroll snap points</td>
+    <td><code>scroll-padding: 20px;</code></td>
+    <td>A padding area of 20px is added around the scroll container.</td>
+  </tr>
+  <tr>
+    <td>scroll-padding-top</td>
+    <td><length>, <percentage>, auto</td>
+    <td>Specifies the padding area at the top of scroll containers</td>
+    <td>Sets the size of the top padding area for scroll snap points</td>
+    <td><code>scroll-padding-top: 10%;</code></td>
+    <td>A padding area equal to 10% of the container's height is added at the top.</td>
+  </tr>
+  <tr>
+    <td>scroll-padding-right</td>
+    <td><length>, <percentage>, auto</td>
+    <td>Specifies the padding area on the right side of scroll containers</td>
+    <td>Sets the size of the right padding area for scroll snap points</td>
+    <td><code>scroll-padding-right: 20px;</code></td>
+    <td>A padding area of 20px is added on the right side of the container.</td>
+  </tr>
+  <tr>
+    <td>scroll-padding-bottom</td>
+    <td><length>, <percentage>, auto</td>
+    <td>Specifies the padding area at the bottom of scroll containers</td>
+    <td>Sets the size of the bottom padding area for scroll snap points</td>
+    <td><code>scroll-padding-bottom: 15%;</code></td>
+    <td>A padding area equal to 15% of the container's height is added at the bottom.</td>
+  </tr>
+  <tr>
+    <td>scroll-padding-left</td>
+    <td><length>, <percentage>, auto</td>
+    <td>Specifies the padding area on the left side of scroll containers</td>
+    <td>Sets the size of the left padding area for scroll snap points</td>
+    <td><code>scroll-padding-left: 10px;</code></td>
+    <td>A padding area of 10px is added on the left side of the container.</td>
+  </tr>
+  <tr>
+    <td>scroll-snap-align</td>
+    <td>none, start, end, center</td>
+    <td>Specifies the alignment of snap points within a scroll container</td>
+    <td>Controls the alignment of snap points along the scroll container's edges</td>
+    <td><code>scroll-snap-align: center;</code></td>
+    <td>Snap points are aligned to the center of the scroll container.</td>
+  </tr>
+  <tr>
+    <td>scroll-snap-stop</td>
+    <td>normal, always</td>
+    <td>Specifies whether scrolling should stop at snap points</td>
+    <td>Determines if scrolling always stops at snap points, regardless of user input</td>
+    <td><code>scroll-snap-stop: always;</code></td>
+    <td>Scrolling always stops at snap points.</td>
+  </tr>
+  <tr>
+    <td>scroll-snap-type-x</td>
+    <td>none, mandatory, proximity</td>
+    <td>Specifies how horizontal scrolling behaves when it stops within a scroll container</td>
+    <td>Controls the snap points behavior of horizontal scrolling</td>
+    <td><code>scroll-snap-type-x: mandatory;</code></td>
+    <td>Horizontal scrolling always stops at snap points.</td>
+  </tr>
+  <tr>
+    <td>scroll-snap-type-y</td>
+    <td>none, mandatory, proximity</td>
+    <td>Specifies how vertical scrolling behaves when it stops within a scroll container</td>
+    <td>Controls the snap points behavior of vertical scrolling</td>
+    <td><code>scroll-snap-type-y: proximity;</code></td>
+    <td>Vertical scrolling stops at the nearest snap point.</td>
+  </tr>
+  <tr>
+    <td>scroll-snap-type</td>
+    <td>none, mandatory, proximity</td>
+    <td>Specifies how scrolling behaves when it stops within a scroll container</td>
+    <td>Controls the snap points behavior of scrollable content</td>
+    <td><code>scroll-snap-type: proximity;</code></td>
+    <td>Scrolling stops at the nearest snap point.</td>
+  </tr>
+  <!-- Add more rows for additional CSS properties -->
+
+<!-- ... Previous table rows ... -->
+  <tr>
+    <td>column-count</td>
+    <td><integer>, auto</td>
+    <td>Specifies the number of columns an element should be divided into</td>
+    <td>Defines the number of columns in a multi-column layout</td>
+    <td><code>column-count: 3;</code></td>
+    <td>Content is divided into 3 columns.</td>
+  </tr>
+  <tr>
+    <td>column-fill</td>
+    <td>auto, balance</td>
+    <td>Specifies how to fill columns with content</td>
+    <td>Determines whether columns should be balanced with content evenly</td>
+    <td><code>column-fill: balance;</code></td>
+    <td>Columns are filled with content evenly.</td>
+  </tr>
+  <tr>
+    <td>column-gap</td>
+    <td><length>, normal</td>
+    <td>Specifies the gap between columns in a multi-column layout</td>
+    <td>Sets the spacing between columns in a multi-column container</td>
+    <td><code>column-gap: 20px;</code></td>
+    <td>There is a 20px gap between columns.</td>
+  </tr>
+  <tr>
+    <td>column-rule</td>
+    <td><line-width> <line-style> <color></td>
+    <td>Specifies the style, color, and width of the rule between columns</td>
+    <td>Defines the appearance of the rule that separates columns</td>
+    <td><code>column-rule: 2px solid #333;</code></td>
+    <td>The column rule is 2px wide, solid, and colored '#333'.</td>
+  </tr>
+  <tr>
+    <td>column-rule-color</td>
+    <td><color></td>
+    <td>Specifies the color of the rule between columns</td>
+    <td>Sets the color of the column rule</td>
+    <td><code>column-rule-color: blue;</code></td>
+    <td>The column rule is colored blue.</td>
+  </tr>
+  <tr>
+    <td>column-rule-style</td>
+    <td><line-style></td>
+    <td>Specifies the style of the rule between columns</td>
+    <td>Sets the style of the column rule (e.g., solid, dashed, dotted)</td>
+    <td><code>column-rule-style: dotted;</code></td>
+    <td>The column rule is displayed as dots.</td>
+  </tr>
+  <tr>
+    <td>column-rule-width</td>
+    <td><line-width></td>
+    <td>Specifies the width of the rule between columns</td>
+    <td>Sets the width of the column rule in pixels or other units</td>
+    <td><code>column-rule-width: 1px;</code></td>
+    <td>The column rule is 1 pixel wide.</td>
+  </tr>
+  <tr>
+    <td>column-span</td>
+    <td>none, all</td>
+    <td>Specifies how an element should span multiple columns</td>
+    <td>Determines whether an element spans one or all columns in a multi-column layout</td>
+    <td><code>column-span: all;</code></td>
+    <td>The element spans all columns in the layout.</td>
+  </tr>
+  <tr>
+    <td>column-width</td>
+    <td><length>, auto</td>
+    <td>Specifies the width of columns in a multi-column layout</td>
+    <td>Sets the width of columns individually or allows them to be automatically determined</td>
+    <td><code>column-width: 200px;</code></td>
+    <td>Columns have a width of 200 pixels.</td>
+  </tr>
+  <tr>
+    <td>columns</td>
+    <td><column-width> <column-count></td>
+    <td>Shorthand property for setting column-width and column-count</td>
+    <td>Defines both the width and number of columns in a multi-column layout</td>
+    <td><code>columns: 300px 3;</code></td>
+    <td>Columns have a width of 300px and are divided into 3.</td>
+  </tr>
+  <tr>
+    <td>widows</td>
+    <td><integer></td>
+    <td>Specifies the minimum number of lines that must be left at the top of a page when breaking a block</td>
+    <td>Determines the number of lines that should remain at the top of a page when a block is broken</td>
+    <td><code>widows: 2;</code></td>
+    <td>At least 2 lines must be left at the top of a page when breaking a block.</td>
+  </tr>
+  <tr>
+    <td>orphans</td>
+    <td><integer></td>
+    <td>Specifies the minimum number of lines that must be left at the bottom of a page when breaking a block</td>
+    <td>Determines the number of lines that should remain at the bottom of a page when a block is broken</td>
+    <td><code>orphans: 3;</code></td>
+    <td>At least 3 lines must be left at the bottom of a page when breaking a block.</td>
+  </tr>
+  <tr>
+    <td>page-break-after</td>
+    <td>auto, always, avoid, left, right</td>
+    <td>Specifies the page break behavior after an element</td>
+    <td>Determines whether and how a page break occurs after an element</td>
+    <td><code>page-break-after: always;</code></td>
+    <td>A page break always occurs after the element.</td>
+  </tr>
+  <tr>
+    <td>page-break-before</td>
+    <td>auto, always, avoid, left, right</td>
+    <td>Specifies the page break behavior before an element</td>
+    <td>Determines whether and how a page break occurs before an element</td>
+    <td><code>page-break-before: always;</code></td>
+    <td>A page break always occurs before the element.</td>
+  </tr>
+  <tr>
+    <td>page-break-inside</td>
+    <td>auto, avoid</td>
+    <td>Specifies the page break behavior inside an element</td>
+    <td>Determines whether and how a page break occurs inside an element</td>
+    <td><code>page-break-inside: avoid;</code></td>
+    <td>Page breaks are avoided inside the element.</td>
+  </tr>
+  <tr>
+    <td>break-after</td>
+    <td>auto, always, avoid, left, right, page, column, avoid-page, avoid-column</td>
+    <td>Specifies the line break behavior after an element</td>
+    <td>Determines whether and how a line break occurs after an element</td>
+    <td><code>break-after: page;</code></td>
+    <td>A page break occurs after the element.</td>
+  </tr>
+  <tr>
+    <td>break-before</td>
+    <td>auto, always, avoid, left, right, page, column, avoid-page, avoid-column</td>
+    <td>Specifies the line break behavior before an element</td>
+    <td>Determines whether and how a line break occurs before an element</td>
+    <td><code>break-before: column;</code></td>
+    <td>A column break occurs before the element.</td>
+  </tr>
+  <tr>
+    <td>break-inside</td>
+    <td>auto, avoid, avoid-page, avoid-column</td>
+    <td>Specifies the line break behavior inside an element</td>
+    <td>Determines whether and how a line break occurs inside an element</td>
+    <td><code>break-inside: avoid-page;</code></td>
+    <td>Line breaks are avoided inside the element within a page.</td>
+  </tr>
+  <tr>
+    <td>counter-increment</td>
+    <td><identifier> <integer></td>
+    <td>Specifies the increment of one or more counters</td>
+    <td>Increases one or more counters by a specified value</td>
+    <td><code>counter-increment: section 2;</code></td>
+    <td>The 'section' counter is incremented by 2.</td>
+  </tr>
+  <tr>
+    <td>counter-reset</td>
+    <td><identifier> <integer></td>
+    <td>Specifies the reset of one or more counters</td>
+    <td>Resets one or more counters to a specified value</td>
+    <td><code>counter-reset: page 1;</code></td>
+    <td>The 'page' counter is reset to 1.</td>
+  </tr>
+  <tr>
+    <td>list-style</td>
+    <td><list-style-type> <list-style-position> <list-style-image></td>
+    <td>Shorthand property for setting list-style-type, list-style-position, and list-style-image</td>
+    <td>Defines the appearance of a list marker for list items</td>
+    <td><code>list-style: square inside url('marker.png');</code></td>
+    <td>Sets a square marker inside the list item with a custom image.</td>
+  </tr>
+  <tr>
+    <td>list-style-type</td>
+    <td>none, disc, circle, square, decimal, decimal-leading-zero, lower-roman, upper-roman, lower-greek, lower-latin, upper-latin, armenian, georgian, lower-alpha, upper-alpha, cjk-ideographic, hiragana, katakana, hiragana-iroha, katakana-iroha</td>
+    <td>Specifies the type of list marker</td>
+    <td>Sets the style of the list marker (e.g., bullet, number, custom)</td>
+    <td><code>list-style-type: square;</code></td>
+    <td>List items are marked with square bullets.</td>
+  </tr>
+  <tr>
+    <td>list-style-position</td>
+    <td>inside, outside</td>
+    <td>Specifies the position of the list marker in relation to the list item</td>
+    <td>Determines whether the list marker appears inside or outside the list item</td>
+    <td><code>list-style-position: outside;</code></td>
+    <td>List markers appear outside the list item's content.</td>
+  </tr>
+  <tr>
+    <td>list-style-image</td>
+    <td><url>, none</td>
+    <td>Specifies an image to be used as the list marker</td>
+    <td>Defines a custom image as the list marker for list items</td>
+    <td><code>list-style-image: url('marker.png');</code></td>
+    <td>A custom image is used as the list marker.</td>
+  </tr>
+  <tr>
+    <td>quotes</td>
+    <td><string> <string></td>
+    <td>Specifies quotation marks for embedded quotations</td>
+    <td>Defines pairs of opening and closing quotation marks for quotes</td>
+    <td><code>quotes: "«" "»" "‘" "’";</code></td>
+    <td>Defines custom quotation marks for quotes.</td>
+  </tr>
+  <tr>
+    <td>bookmark-label</td>
+    <td><string></td>
+    <td>Specifies a label for a bookmark destination</td>
+    <td>Assigns a label to a bookmark destination within a document</td>
+    <td><code>bookmark-label: "Chapter 1";</code></td>
+    <td>Assigns the label "Chapter 1" to a bookmark destination.</td>
+  </tr>
+  <tr>
+    <td>bookmark-level</td>
+    <td><integer></td>
+    <td>Specifies the hierarchical level of a bookmark destination</td>
+    <td>Assigns a hierarchical level to a bookmark destination within a document</td>
+    <td><code>bookmark-level: 2;</code></td>
+    <td>Assigns a level 2 hierarchy to a bookmark destination.</td>
+  </tr>
+  <tr>
+    <td>bookmark-state</td>
+    <td>open, closed</td>
+    <td>Specifies the initial state (expanded or collapsed) of a bookmark tree node</td>
+    <td>Sets the initial state of a bookmark tree node as open or closed</td>
+    <td><code>bookmark-state: closed;</code></td>
+    <td>The bookmark tree node is initially closed.</td>
+  </tr>
+  <tr>
+    <td>bookmark-target</td>
+    <td><string></td>
+    <td>Specifies the target of a bookmark link</td>
+    <td>Associates a bookmark link with a specific bookmark destination within a document</td>
+    <td><code>bookmark-target: "Chapter1";</code></td>
+    <td>Associates the bookmark link with the "Chapter1" destination.</td>
+  </tr>
+  <tr>
+    <td>bookmark-state</td>
+    <td>open, closed</td>
+    <td>Specifies the initial state (expanded or collapsed) of a bookmark tree node</td>
+    <td>Sets the initial state of a bookmark tree node as open or closed</td>
+    <td><code>bookmark-state: closed;</code></td>
+    <td>The bookmark tree node is initially closed.</td>
+  </tr>
+  <tr>
+    <td>bookmark-target</td>
+    <td><string></td>
+    <td>Specifies the target of a bookmark link</td>
+    <td>Associates a bookmark link with a specific bookmark destination within a document</td>
+    <td><code>bookmark-target: "Chapter1";</code></td>
+    <td>Associates the bookmark link with the "Chapter1" destination.</td>
+  </tr>
+  <tr>
+    <td>bookmark-state</td>
+    <td>open, closed</td>
+    <td>Specifies the initial state (expanded or collapsed) of a bookmark tree node</td>
+    <td>Sets the initial state of a bookmark tree node as open or closed</td>
+    <td><code>bookmark-state: closed;</code></td>
+    <td>The bookmark tree node is initially closed.</td>
+  </tr>
+  <tr>
+    <td>bookmark-target</td>
+    <td><string></td>
+    <td>Specifies the target of a bookmark link</td>
+    <td>Associates a bookmark link with a specific bookmark destination within a document</td>
+    <td><code>bookmark-target: "Chapter1";</code></td>
+    <td>Associates the bookmark link with the "Chapter1" destination.</td>
+  </tr>
+  <tr>
+    <td>bookmark-state</td>
+    <td>open, closed</td>
+    <td>Specifies the initial state (expanded or collapsed) of a bookmark tree node</td>
+    <td>Sets the initial state of a bookmark tree node as open or closed</td>
+    <td><code>bookmark-state: closed;</code></td>
+    <td>The bookmark tree node is initially closed.</td>
+  </tr>
+  <tr>
+    <td>bookmark-target</td>
+    <td><string></td>
+    <td>Specifies the target of a bookmark link</td>
+    <td>Associates a bookmark link with a specific bookmark destination within a document</td>
+    <td><code>bookmark-target: "Chapter1";</code></td>
+    <td>Associates the bookmark link with the "Chapter1" destination.</td>
+  </tr>
+  <!-- Add more rows for additional CSS properties -->
+</table>
+<table>
+  <tr>
+    <th colspan="6">Box Model</th>
+  </tr>
+  <tr>
+    <td>width</td>
+    <td><length>, auto</td>
+    <td>Specifies the width of an element's content area</td>
+    <td>Sets the width of an element</td>
+    <td><code>width: 300px;</code></td>
+    <td>The element has a width of 300 pixels.</td>
+  </tr>
+  <tr>
+    <td>min-width</td>
+    <td><length>, auto</td>
+    <td>Specifies the minimum width of an element's content area</td>
+    <td>Sets the minimum width of an element</td>
+    <td><code>min-width: 100px;</code></td>
+    <td>The element's minimum width is 100 pixels.</td>
+  </tr>
+  <!-- ... More Box Model properties ... -->
+
+  <tr>
+    <th colspan="6">Positioning</th>
+  </tr>
+  <tr>
+    <td>position</td>
+    <td>static, relative, absolute, fixed, sticky</td>
+    <td>Specifies the positioning method of an element</td>
+    <td>Controls how an element is positioned within its containing element</td>
+    <td><code>position: absolute;</code></td>
+    <td>The element is positioned absolutely within its container.</td>
+  </tr>
+  <tr>
+    <td>top</td>
+    <td><length>, <percentage>, auto</td>
+    <td>Specifies the top position of a positioned element</td>
+    <td>Sets the distance from the top edge of the containing element</td>
+    <td><code>top: 20px;</code></td>
+    <td>The element is 20 pixels from the top of its containing element.</td>
+  </tr>
+  <!-- ... More Positioning properties ... -->
+
+  <tr>
+    <th colspan="6">Typography</th>
+  </tr>
+  <tr>
+    <td>font-family</td>
+    <td><family-name>, <generic-family></td>
+    <td>Specifies the font family for text</td>
+    <td>Sets the typeface or font family for text</td>
+    <td><code>font-family: "Arial", sans-serif;</code></td>
+    <td>Text is displayed in the Arial font or a sans-serif font if Arial is unavailable.</td>
+  </tr>
+  <tr>
+    <td>font-size</td>
+    <td><length>, <percentage>, <em>, <rem></td>
+    <td>Specifies the font size of text</td>
+    <td>Sets the size of text characters</td>
+    <td><code>font-size: 16px;</code></td>
+    <td>Text characters are 16 pixels in size.</td>
+  </tr>
+  <!-- ... More Typography properties ... -->
+
+  <tr>
+    <th colspan="6">Backgrounds and Borders</th>
+  </tr>
+  <tr>
+    <td>background-color</td>
+    <td><color>, transparent</td>
+    <td>Specifies the background color of an element</td>
+    <td>Sets the color of an element's background</td>
+    <td><code>background-color: #F0F0F0;</code></td>
+    <td>The element's background color is light gray.</td>
+  </tr>
+  <tr>
+    <td>background-image</td>
+    <td><url>, none</td>
+    <td>Specifies one or more background images for an element</td>
+    <td>Applies one or more images to the background of an element</td>
+    <td><code>background-image: url('bg.jpg');</code></td>
+    <td>The element's background is an image named 'bg.jpg'.</td>
+  </tr>
+  <!-- ... More Backgrounds and Borders properties ... -->
+
+  <tr>
+    <th colspan="6">Grid Layout</th>
+  </tr>
+  <tr>
+    <td>grid-template-columns</td>
+    <td><track-list></td>
+    <td>Specifies the size of columns in a grid layout</td>
+    <td>Defines the number and size of columns in a grid container</td>
+    <td><code>grid-template-columns: 1fr 2fr;</code></td>
+    <td>There are two columns with a 1:2 size ratio.</td>
+  </tr>
+  <tr>
+    <td>grid-template-rows</td>
+    <td><track-list></td>
+    <td>Specifies the size of rows in a grid layout</td>
+    <td>Defines the number and size of rows in a grid container</td>
+    <td><code>grid-template-rows: 100px 200px;</code></td>
+    <td>There are two rows with heights of 100 pixels and 200 pixels.</td>
+  </tr>
+  <!-- ... More Grid Layout properties ... -->
+
+  <tr>
+    <th colspan="6">Multi-Column Layout</th>
+  </tr>
+  <tr>
+    <td>column-count</td>
+    <td><integer>, auto</td>
+    <td>Specifies the number of columns an element should be divided into</td>
+    <td>Defines the number of columns in a multi-column layout</td>
+    <td><code>column-count: 3;</code></td>
+    <td>Content is divided into 3 columns.</td>
+  </tr>
+  <tr>
+    <td>column-fill</td>
+    <td>auto, balance</td>
+    <td>Specifies how to fill columns with content</td>
+    <td>Determines whether columns should be balanced with content evenly</td>
+    <td><code>column-fill: balance;</code></td>
+    <td>Columns are filled with content evenly.</td>
+  </tr>
+  <!-- ... More Multi-Column Layout properties ... -->
+
+  <tr>
+    <th colspan="6">Paged Media</th>
+  </tr>
+  <tr>
+    <td>widows</td>
+    <td><integer></td>
+    <td>Specifies the minimum number of lines that must be left at the top of a page when breaking a block</td>
+    <td>Determines the number of lines that should remain at the top of a page when a block is broken</td>
+    <td><code>widows: 2;</code></td>
+    <td>At least 2 lines must be left at the top of a page when breaking a block.</td>
+  </tr>
+  <tr>
+    <td>orphans</td>
+    <td><integer></td>
+    <td>Specifies the minimum number of lines that must be left at the bottom of a page when breaking a block</td>
+    <td>Determines the number of lines that should remain at the bottom of a page when a block is broken</td>
+    <td><code>orphans: 3;</code></td>
+    <td>At least 3 lines must be left at the bottom of a page when breaking a block.</td>
+  </tr>
+  <!-- ... More Paged Media properties ... -->
+
+  <!-- Add more groups and properties as needed -->
+<tr>
+    <th colspan="6">Backgrounds and Borders (continued)</th>
+</tr>
+<tr>
+    <td>border-style</td>
+    <td>none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset</td>
+    <td>Specifies the style of an element's border</td>
+    <td>Sets the style of an element's border</td>
+    <td><code>border-style: dashed;</code></td>
+    <td>The element's border is displayed as dashed lines.</td>
+</tr>
+<tr>
+    <td>border-color</td>
+    <td><color></td>
+    <td>Specifies the color of an element's border</td>
+    <td>Sets the color of an element's border</td>
+    <td><code>border-color: #333;</code></td>
+    <td>The element's border color is dark gray (#333).</td>
+</tr>
+<!-- ... More Backgrounds and Borders properties ... -->
+
+<tr>
+    <th colspan="6">Colors</th>
+</tr>
+<tr>
+    <td>color</td>
+    <td><color></td>
+    <td>Specifies the text color of an element</td>
+    <td>Sets the color of text content</td>
+    <td><code>color: red;</code></td>
+    <td>Text content is displayed in red.</td>
+</tr>
+<tr>
+    <td>opacity</td>
+    <td><number></td>
+    <td>Specifies the transparency of an element</td>
+    <td>Sets the level of transparency for an element</td>
+    <td><code>opacity: 0.5;</code></td>
+    <td>The element is 50% transparent.</td>
+</tr>
+<!-- ... More Colors properties ... -->
+
+<tr>
+    <th colspan="6">Text</th>
+</tr>
+<tr>
+    <td>text-align</td>
+    <td>left, right, center, justify</td>
+    <td>Specifies the horizontal alignment of text content</td>
+    <td>Aligns text content within its containing element horizontally</td>
+    <td><code>text-align: center;</code></td>
+    <td>Text content is centered within its container.</td>
+</tr>
+<tr>
+    <td>text-decoration</td>
+    <td>none, underline, overline, line-through, blink</td>
+    <td>Specifies decorations added to text content</td>
+    <td>Adds decorations such as underlines or strikethrough to text</td>
+    <td><code>text-decoration: underline;</code></td>
+    <td>Text content is underlined.</td>
+</tr>
+<!-- ... More Text properties ... -->
+
+<tr>
+    <th colspan="6">Transforms</th>
+</tr>
+<tr>
+    <td>transform</td>
+    <td><transform-function></td>
+    <td>Applies 2D or 3D transformations to an element</td>
+    <td>Transforms an element by applying functions like scale, rotate, or translate</td>
+    <td><code>transform: rotate(45deg);</code></td>
+    <td>The element is rotated 45 degrees.</td>
+</tr>
+<tr>
+    <td>transform-origin</td>
+    <td><position></td>
+    <td>Specifies the origin point of a transformation</td>
+    <td>Sets the point around which a transformation is applied</td>
+    <td><code>transform-origin: center;</code></td>
+    <td>The transformation is applied around the center of the element.</td>
+</tr>
+<!-- ... More Transforms properties ... -->
+
+<tr>
+    <th colspan="6">Animations</th>
+</tr>
+<tr>
+    <td>animation</td>
+    <td><animation-name> <animation-duration> <animation-timing-function> <animation-delay> <animation-iteration-count> <animation-direction></td>
+    <td>Shorthand property for defining animations</td>
+    <td>Creates animations by specifying animation name, duration, and other properties</td>
+    <td><code>animation: myanimation 2s ease 1s infinite alternate;</code></td>
+    <td>Applies an animation called "myanimation" with specific settings.</td>
+</tr>
+<tr>
+    <td>keyframes</td>
+    <td><keyframes-name> { <keyframe-rules> }</td>
+    <td>Defines a set of animation keyframes</td>
+    <td>Specifies intermediate steps in an animation</td>
+    <td><code>@keyframes myanimation { 0% { opacity: 0; } 100% { opacity: 1; } }</code></td>
+    <td>Defines keyframes for the "myanimation" animation.</td>
+</tr>
+<!-- ... More Animations properties ... -->
+
+<tr>
+    <th colspan="6">Transitions</th>
+</tr>
+<tr>
+    <td>transition</td>
+    <td><property> <duration> <timing-function> <delay></td>
+    <td>Shorthand property for defining transitions</td>
+    <td>Creates smooth transitions between property values</td>
+    <td><code>transition: opacity 0.5s ease-in-out;</code></td>
+    <td>Applies a transition to the opacity property with specific settings.</td>
+</tr>
+<tr>
+    <td>transition-property</td>
+    <td><property></td>
+    <td>Specifies the CSS properties to which a transition should be applied</td>
+    <td>Selects the properties to transition when a change occurs</td>
+    <td><code>transition-property: color, font-size;</code></td>
+    <td>Transitions occur for color and font-size changes.</td>
+</tr>
+<!-- ... More Transitions properties ... -->
+
+<!-- Add more categories and properties as needed -->
+  
+<tr>
+    <th colspan="6">Flexbox</th>
+</tr>
+<tr>
+    <td>display</td>
+    <td>flex, inline-flex</td>
+    <td>Specifies a flex container</td>
+    <td>Turns an element into a flex container</td>
+    <td><code>display: flex;</code></td>
+    <td>The element becomes a flex container.</td>
+</tr>
+<tr>
+    <td>flex-direction</td>
+    <td>row, row-reverse, column, column-reverse</td>
+    <td>Specifies the direction of flex items</td>
+    <td>Defines the main axis direction for flex items</td>
+    <td><code>flex-direction: column;</code></td>
+    <td>Flex items are stacked vertically.</td>
+</tr>
+<!-- ... More Flexbox properties ... -->
+
+<tr>
+    <th colspan="6">Grid Layout (continued)</th>
+</tr>
+<tr>
+    <td>grid-gap</td>
+    <td><length> <length></td>
+    <td>Specifies the size of the gap between rows and columns in a grid</td>
+    <td>Sets the gap between rows and columns in a grid container</td>
+    <td><code>grid-gap: 10px 20px;</code></td>
+    <td>A 10px gap between rows and a 20px gap between columns in a grid.</td>
+</tr>
+<tr>
+    <td>grid-column</td>
+    <td><grid-line> / <grid-line></td>
+    <td>Specifies the grid item's start and end positions within the grid columns</td>
+    <td>Determines the placement of a grid item within columns</td>
+    <td><code>grid-column: 2 / span 3;</code></td>
+    <td>The grid item starts at column line 2 and spans 3 columns.</td>
+</tr>
+<!-- ... More Grid Layout properties ... -->
+
+<tr>
+    <th colspan="6">Multi-Column Layout (continued)</th>
+</tr>
+<tr>
+    <td>column-span</td>
+    <td>none, all</td>
+    <td>Specifies whether a column-span element spans multiple columns</td>
+    <td>Controls whether an element spans multiple columns in a multi-column layout</td>
+    <td><code>column-span: all;</code></td>
+    <td>The element spans all columns in the multi-column layout.</td>
+</tr>
+<tr>
+    <td>column-width</td>
+    <td><length>, auto</td>
+    <td>Specifies the optimal width for columns</td>
+    <td>Sets the preferred width for columns in a multi-column layout</td>
+    <td><code>column-width: 200px;</code></td>
+    <td>Columns have an optimal width of 200 pixels.</td>
+</tr>
+<!-- ... More Multi-Column Layout properties ... -->
+
+<tr>
+    <th colspan="6">Paged Media (continued)</th>
+</tr>
+<tr>
+    <td>page-break-after</td>
+    <td>auto, always, avoid, left, right</td>
+    <td>Specifies the page break behavior after an element</td>
+    <td>Determines whether and how a page break occurs after an element</td>
+    <td><code>page-break-after: always;</code></td>
+    <td>A page break always occurs after the element.</td>
+</tr>
+<tr>
+    <td>page-break-before</td>
+    <td>auto, always, avoid, left, right</td>
+    <td>Specifies the page break behavior before an element</td>
+    <td>Determines whether and how a page break occurs before an element</td>
+    <td><code>page-break-before: left;</code></td>
+    <td>A page break occurs before the element on the left page.</td>
+</tr>
+<!-- ... More Paged Media properties ... -->
+
+<!-- Add more categories and properties as needed -->    
+  
+</table>
+</body>
+</html>
